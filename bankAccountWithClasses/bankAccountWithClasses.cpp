@@ -28,6 +28,19 @@ class Bank_account {
 };
 
 int main () {
-    std::cout << "";
-    return 0;
+    std::cout << "Welcome to your personal bank! Because this is your first time here, you must open a bank account and input how much money you would like to deposit. The interest rate is set by us and will be displayed right after you deposit your money.\n";
+	double balance;
+	std::cout << "Input your desired deposit in US dollars.\n";
+	std::cin >> balance;
+	Bank_account b (balance);
+	std::cout << "Would you like to calculate your future balance based on the current interest and the number of months for which you will leave your deposit? (Input 1 for \"yes\", and 0 for \"no\".)\n";
+	int interestDecision;
+	std::cin >> interestDecision;
+	if (interestDecision == 1) {
+		double x = b.finalBalance() * 100;
+		printf("Your future balance is USD %.2f.\n", round(x)/100);
+	}
+    std::cout << "Pleasure doing business with you; have a pleasant day!\n";
+	
+	return 0;
 }

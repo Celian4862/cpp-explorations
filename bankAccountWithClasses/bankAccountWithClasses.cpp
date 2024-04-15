@@ -40,8 +40,7 @@ int main () {
 		double x = b.finalBalance() * 100;
 		printf("Your future balance is USD %.2f.\n", round(x)/100);
 	}
-	cout << "Pleasure doing business with you; have a pleasant day!\n";
+    cout << "Pleasure doing business with you; have a pleasant day!\n";
 	
 	return 0;
-}
 }
